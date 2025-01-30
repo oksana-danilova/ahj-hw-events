@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 120px);
+  grid-template-rows: repeat(4, 120px);
+  gap: 3px;
+  width: fit-content;
+  margin: 20px auto;
+}
+
+.game-info {
+  display: block;
+  box-shadow: 0 2px 4px rgba(42, 236, 187, 0.5);
+  width: 250px;
+  height: 150px;
+  padding: 5px 0px 25px 25px;
+  margin: 20px auto;
+  border-radius: 20px;
+}
+
+.title {
+  color: green;
+  text-align: center;
+}
+
+.text {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.cell {
+  background: rgb(205, 203, 203);
+  width: 100px;
+  height: 100px;
+  position: relative;
+  border: 5px solid green;
+  border-radius: 20px;
+  cursor: url("../img/hammer-cursor.png"), auto;
+}
+
+.cell:hover {
+  transform: scale(1.05);
+  box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.1), inset -3px -3px 8px rgba(255, 255, 255, 0.7),
+              7px 7px 14px rgba(0, 0, 0, 0.1), -7px -7px 14px rgba(255, 255, 255, 0.7);
+}
+
+.goblin {
+  background-size: cover;
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
